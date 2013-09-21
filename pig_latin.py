@@ -31,28 +31,27 @@ original = raw_input('Enter a word:')
 if len(original) > 0 and original.isalpha():
     # convert the word to lower case
     word = original.lower()
-    
     # splice the first letter from the word for checking against the list of vowels
     first = word[0]
-    
+
     # Check if the first letter is a vowel then conentate it with 'pyg' varible
     if first in vowels:
         new_word = word + pyg
-         
+
          # Print the translated word to the console
         print new_word
-    
+
     # If the first letter is a consonant then translate directly to pig latin
     else:
         # Find the length of the word (total amount of characters)
         word_length = len(original)
-        
+
         # Use the length to splice the word from the 2nd character to the last
         spliced_word = word[1:word_length]
-        
+
         # Now re-arrange the word to complete the pig latin translation
         new_word = spliced_word + first + pyg
-        
+
         # Print the translated word to the console
         print new_word
 else:
