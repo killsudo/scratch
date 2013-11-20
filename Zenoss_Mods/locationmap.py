@@ -1,3 +1,8 @@
+''' The following sample code can modify the Zenoss location based upon SNMP 
+string.
+/opt/zenoss/ZenPacks/ZenPacks.community.SNMPLocation-2.0.1-py2.7.egg/ZenPacks/
+community / SNMPLocation/modeler/plugins/community/snmp/LocationMap.py '''
+
 
 CyberconStl = "/Cybercon - STL/210 N.Tucker/Floor7/"
 
