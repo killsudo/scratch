@@ -13,23 +13,23 @@ newval = om
 def location(newval):
     if len(newval):
         if newval[0] == 'S':
-            newval = [CyberconStl + newval[0-1:newval] + row + 
-                     newval[2:newval] + rack + newval[3-4:newval]
-                     ]
+            newval = ( CyberconStl + newval[0:2] + row + newval[2] + rack 
+                     + newval[3] )
+                     
 
             # run prepId() on all parts between slashes:
-        newval = "/".join(map(self.prepId, newval.split("/")))
+#        newval = "/".join(map(self.prepId, newval.split("/")))
             
             # likely, an initial "/" was not in the SNMP location. Check. Add 
             #   if needed.
-        if newval[0] != "/":
-            newval = "/" + newval
+#        if newval[0] != "/":
+#           newval = "/" + newval
             
             # update our objectMap with our tweaked value:
-    om.setSNMPLocation = newval
+    om = newval
 
 #        log.info('Location: %s', om.setSNMPLocation)
 
-    return om.setSNMPLocation
+    return om
 
 print location(x)
